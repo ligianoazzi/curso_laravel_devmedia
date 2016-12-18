@@ -56,3 +56,7 @@ Route::get('home', function(){
 });
 
 Route::get('produto', 'ProdutoController@index');
+
+
+Route::get('usuario', ['uses'=>'UsuarioController@index', 'as'=>'usuario']);
+
