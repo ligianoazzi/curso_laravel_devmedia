@@ -12,5 +12,9 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // $this->call(UsersTableSeeder::class);
+           $this->call(LivrosTableSeeder::class);
+        // aqui vai o nome do arquivo seeder e não o nome da tabela
+        // no arquivo seeder vai o nome da tabela
+           
     }
 }
