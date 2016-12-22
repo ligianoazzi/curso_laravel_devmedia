@@ -19,6 +19,7 @@ class LivrosTableSeeder extends Seeder
     		]);*/
     	
     	factory('App\Livro',50)->create();
+    	// pode também ser rodado pelo Tinker, mas tem que copiar o codigo e inserir no cmd
 
     }
 }

@@ -10,6 +10,7 @@ class Livro extends Model
 	public function listaLivros()
 	{
 		return $this->all();
+		//return $this->db->get("usuario")->result_array();
 	}
 
 }
