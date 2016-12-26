@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CriaTabelaTelefones extends Migration
+class AdicionaDescricaoTelefoneTaberlaTelefones extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,10 @@ class CriaTabelaTelefones extends Migration
      */
     public function up()
     {
-        Schema::create('telefones', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('cliente_id')->unsigned();
-            $table->timestamps();
-        });
-
         Schema::table('telefones', function (Blueprint $table) {
-            $table->foreign('cliente_id')->references('id')->on('clientes');
-        });        
-
+            $table->string('descricao');
+            $table->string('telefone');
+        });
     }
 
     /**
@@ -32,6 +26,6 @@ class CriaTabelaTelefones extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('telefones');
+
     }
 }
